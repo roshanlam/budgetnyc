@@ -4,7 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const NAV_ITEMS = [
+type NavItem = {
+  href: string;
+  label: string;
+  special?: boolean;
+};
+
+const NAV_ITEMS: NavItem[] = [
   { href: "/", label: "Map" },
   { href: "/spots", label: "Spots" },
   { href: "/workspaces", label: "Work Spots" },
