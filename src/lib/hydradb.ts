@@ -22,9 +22,11 @@ function detectCategory(query: string): string | null {
 }
 
 const HYDRA_API = "https://api.hydradb.com";
-const TENANT_ID = process.env.HYDRADB_TENANT_ID || "WealthWise";
+const TENANT_ID = process.env.HYDRADB_TENANT_ID || "budgetnyc";
 const API_KEY = process.env.HYDRADB_API_KEY || "";
-const SUB_TENANT = "nyc_venues";
+// Use default sub-tenant (automatically created with tenant)
+// Leave empty to use the default, or set to a specific sub-tenant name
+const SUB_TENANT = process.env.HYDRADB_SUB_TENANT_ID || "";
 
 export interface VenueData {
   name: string;
@@ -55,13 +57,17 @@ export async function searchVenues(
 
   const body: Record<string, unknown> = {
     tenant_id: TENANT_ID,
-    sub_tenant_id: SUB_TENANT,
     query,
     max_results: maxResults,
     mode: "fast",
     alpha: "auto",
     recency_bias: 0,
   };
+
+  // Only include sub_tenant_id if specified (otherwise uses default)
+  if (SUB_TENANT) {
+    body.sub_tenant_id = SUB_TENANT;
+  }
 
   // Use HydraDB native metadata filtering when category intent is clear
   if (intendedCategory) {
@@ -154,10 +160,9 @@ export async function ingestVenue(venue: VenueData): Promise<boolean> {
     .filter(Boolean)
     .join("\n");
 
-  const appSource = {
+  const appSource: Record<string, unknown> = {
     id: venue.slug,
     tenant_id: TENANT_ID,
-    sub_tenant_id: SUB_TENANT,
     title: venue.name,
     source: "budgetnyc",
     description: `${venue.category}${venue.subcategory ? "/" + venue.subcategory : ""} in ${venue.neighborhood}`,
@@ -172,13 +177,27 @@ export async function ingestVenue(venue: VenueData): Promise<boolean> {
     },
   };
 
+  // Only include sub_tenant_id if specified (otherwise uses default)
+  if (SUB_TENANT) {
+    appSource.sub_tenant_id = SUB_TENANT;
+  }
+
   const boundary = `----FormBoundary${Date.now()}`;
   const parts = [
     `--${boundary}\r\nContent-Disposition: form-data; name="tenant_id"\r\n\r\n${TENANT_ID}`,
-    `--${boundary}\r\nContent-Disposition: form-data; name="sub_tenant_id"\r\n\r\n${SUB_TENANT}`,
+  ];
+
+  // Only include sub_tenant_id if specified (otherwise uses default)
+  if (SUB_TENANT) {
+    parts.push(`--${boundary}\r\nContent-Disposition: form-data; name="sub_tenant_id"\r\n\r\n${SUB_TENANT}`);
+  }
+
+  parts.push(
     `--${boundary}\r\nContent-Disposition: form-data; name="app_sources"\r\n\r\n${JSON.stringify([appSource])}`,
-    `--${boundary}--`,
-  ].join("\r\n");
+    `--${boundary}--`
+  );
+
+  const body = parts.join("\r\n");
 
   const res = await fetch(`${HYDRA_API}/ingestion/upload_knowledge`, {
     method: "POST",
@@ -186,7 +205,7 @@ export async function ingestVenue(venue: VenueData): Promise<boolean> {
       Authorization: `Bearer ${API_KEY}`,
       "Content-Type": `multipart/form-data; boundary=${boundary}`,
     },
-    body: parts,
+    body: body,
   });
 
   if (!res.ok) {
