@@ -46,7 +46,7 @@ export async function GET() {
                 fontWeight: 700,
               }}
             >
-              SF
+              NYC
             </div>
             <span
               style={{
@@ -55,7 +55,7 @@ export async function GET() {
                 color: "#1a1a2e",
               }}
             >
-              BudgetSF
+              BudgetNYC
             </span>
           </div>
           <p
@@ -66,7 +66,7 @@ export async function GET() {
               maxWidth: "600px",
             }}
           >
-            Cheap food, groceries, gyms & more in SF.
+            Cheap food, groceries, gyms & more in NYC.
             Community-curated by locals.
           </p>
           <div

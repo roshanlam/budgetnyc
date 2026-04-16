@@ -36,10 +36,10 @@ export default function SpotsPage() {
               className="flex items-center gap-2"
             >
               <div className="w-6 h-6 rounded bg-accent flex items-center justify-center text-white font-bold text-[10px]">
-                SF
+                NYC
               </div>
               <span className="font-semibold text-sm text-foreground">
-                BudgetSF
+                BudgetNYC
               </span>
             </Link>
             <span className="text-muted text-xs">/ Spots</span>

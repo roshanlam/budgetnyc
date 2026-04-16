@@ -12,9 +12,7 @@ const NAV_ITEMS = [
   { href: "/events", label: "Events" },
   { href: "/free", label: "Free" },
   { href: "/community", label: "Vote / Add" },
-  { href: "/diet", label: "Diet" },
-  { href: "/picks", label: "My Picks", special: true },
-  { href: "/about", label: "About Me" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Header() {
@@ -27,13 +25,13 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-7 h-7 rounded-lg bg-accent flex items-center justify-center text-white text-[10px] font-bold tracking-tight shadow-sm group-hover:shadow-md transition-shadow">
-            SF
+            NYC
           </div>
           <span
             className="text-[17px] text-foreground tracking-tight"
             style={{ fontFamily: "var(--font-dm-serif)" }}
           >
-            BudgetSF
+            BudgetNYC
           </span>
         </Link>
 

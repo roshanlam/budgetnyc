@@ -1,43 +1,33 @@
-# BudgetSF
+# BudgetNYC
 
-**The guide to San Francisco I wish I had when I moved here.**
+**The guide to New York City I wish I had when I moved here.**
 
 ---
 
 ## The Problem
 
-I moved to SF to build a startup. What nobody told me is how fast this city drains your bank account.
+I moved to NYC to build find a job and work on my startup. But unfortunately its very expensive, thankfully Hanoor built BudgetSF and seeing that I decided to fork the project and lauch BudgetNYC as we definitely need it here as well.
 
-- **$18** for a lunch salad
-- **$130/month** for a gym membership
-- **$2,400+** for a studio apartment
-- **$35** for an Uber that was $10 five minutes ago
-- **$7** for a coffee
-
-I'd sit in my overpriced apartment eating $15 delivery burritos, wondering why nobody had just... mapped out where the cheap stuff is. Every "budget SF" guide I found was written by someone who thinks $22 ramen is affordable.
-
-So I built the guide myself.
+I will make a few modifications to platform as needed with feedback from users.
 
 ## What This Is
 
-[BudgetSF](https://budgetsf.com) is a map-first web app with **144+ community-curated spots** across San Francisco — cheap eats, affordable gyms, free coworking, budget groceries, and more. Everything on the site is either something I personally use or something the community voted in.
+[BudgetNYC](https://budgetnyc.com) is a map-first web app with community-curated spots across New York City — cheap eats, affordable gyms, free coworking, budget groceries, and more. Everything on the site is submitted and approved by the community.
 
 **It's not a review site.** It's a survival guide.
 
 ### What's Inside
 
 - **Interactive Map** — Every spot pinned, color-coded by category, searchable. "Near Me" finds what's closest.
-- **Budget Diet** — My actual meal plan. $7.25/day, ~$250/month. Costco runs, protein breakdowns, the whole thing.
-- **Free Things** — 60+ free activities. Museum free days, parks, trails. SF gives away a lot if you know where to look.
-- **Getting Around** — Robotaxis, Bay Wheels ($20/mo unlimited e-bikes), BART to SFO for $10 instead of a $45 Uber.
-- **Work Spots** — Free and cheap places to work from. Libraries, cafe-offices, hotel lobbies nobody kicks you out of.
-- **Events & Community** — Who to follow, where to find events, 15+ recurring communities for founders/engineers.
-- **My Picks** — The actual products I use. $25/mo unlimited hotspot, the credit card that nets $0/year, neighborhoods ranked by rent.
+- **Free Things** — 60+ free activities. Museum free days, parks, trails. NYC gives away a lot if you know where to look.
+- **Getting Around** — Subway passes, Citi Bike, and public transit info to navigate NYC affordably.
+- **Work Spots** — Free and cheap places to work from. Libraries, cafe-offices, and coworking spaces.
+- **Events & Community** — Discover events and connect with communities across NYC.
 - **Community Voting** — Anyone can submit a spot. 5 community approvals and it goes live on the map.
 
 ## Why Open Source
 
-Because this should've existed years ago and it shouldn't be behind a paywall. If you know a cheap spot, add it. If you just moved to SF, use it.
+Because this should've existed years ago and it shouldn't be behind a paywall. If you know a cheap spot, add it. If you just moved to NYC, use it.
 
 ## Tech Stack
 
@@ -51,8 +41,8 @@ Because this should've existed years ago and it shouldn't be behind a paywall. I
 ## Run It Locally
 
 ```bash
-git clone https://github.com/iharnoor/BudgetSF.git
-cd BudgetSF
+git clone https://github.com/roshanlam/BudgetNYC.git
+cd BudgetNYC
 npm install
 npm run dev
 ```
@@ -72,4 +62,4 @@ MIT
 
 ---
 
-*Built by [@iharnoor](https://github.com/iharnoor) in SF, on a budget.*
+*Built Originally by [@iharnoor](https://github.com/iharnoor) in SF, on a budget. Modified and maintaining for NYC by [@roshanlam](https://github.com/roshanlam)*

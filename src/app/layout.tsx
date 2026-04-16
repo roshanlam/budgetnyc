@@ -27,31 +27,32 @@ export const metadata: Metadata = {
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : "http://localhost:3000"
   ),
-  title: "BudgetSF — Cheap Spots in SF, by Locals",
+  title: "BudgetNYC — Cheap Spots in NYC, by Locals",
   description:
-    "Community-curated budget-friendly food, groceries, gyms, and more in San Francisco. Open source, powered by locals.",
+    "Community-curated budget-friendly food, groceries, gyms, and more in New York City. Open source, powered by locals.",
   openGraph: {
-    title: "BudgetSF — Cheap Spots in SF",
+    title: "BudgetNYC — Cheap Spots in NYC",
     description:
-      "Find the cheapest food, groceries, gyms & more in San Francisco. Community-curated, 5 approvals to go live.",
-    siteName: "BudgetSF",
+      "Find the cheapest food, groceries, gyms & more in New York City. Community-curated, 5 approvals to go live.",
+    siteName: "BudgetNYC",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/api/og", width: 1200, height: 630, alt: "BudgetSF" }],
+    images: [{ url: "/api/og", width: 1200, height: 630, alt: "BudgetNYC" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BudgetSF — Cheap Spots in SF",
+    title: "BudgetNYC — Cheap Spots in NYC",
     description:
-      "Community-curated budget spots in San Francisco. Discover or add your favorites.",
+      "Community-curated budget spots in New York City. Discover or add your favorites.",
     images: ["/api/og"],
   },
   keywords: [
-    "San Francisco",
+    "New York City",
+    "NYC",
     "budget",
     "cheap food",
     "cheap gym",
-    "SF deals",
+    "NYC deals",
     "community",
   ],
 };

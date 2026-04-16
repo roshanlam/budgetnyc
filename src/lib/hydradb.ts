@@ -24,7 +24,7 @@ function detectCategory(query: string): string | null {
 const HYDRA_API = "https://api.hydradb.com";
 const TENANT_ID = process.env.HYDRADB_TENANT_ID || "WealthWise";
 const API_KEY = process.env.HYDRADB_API_KEY || "";
-const SUB_TENANT = "sf_venues";
+const SUB_TENANT = "nyc_venues";
 
 export interface VenueData {
   name: string;
@@ -159,7 +159,7 @@ export async function ingestVenue(venue: VenueData): Promise<boolean> {
     tenant_id: TENANT_ID,
     sub_tenant_id: SUB_TENANT,
     title: venue.name,
-    source: "budgetsf",
+    source: "budgetnyc",
     description: `${venue.category}${venue.subcategory ? "/" + venue.subcategory : ""} in ${venue.neighborhood}`,
     content: {
       text: `${readable}\n\n---JSON---\n${JSON.stringify(venue)}`,

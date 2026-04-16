@@ -27,359 +27,194 @@ type Workspace = {
 };
 
 const WORKSPACES: Workspace[] = [
-  // Free coworking
+  // 🆓 Free / near-free coworking vibes
   {
-    name: "Founders Cafe",
+    name: "Industry City",
     type: "free",
-    neighborhood: "SoMa",
+    neighborhood: "Sunset Park",
     description:
-      "Free coworking for founders and builders. Community-driven space where you can work, network, and collaborate.",
-    price: "Free",
+      "Massive indoor/outdoor complex with tons of seating, wifi, and food vendors. Easy to spend all day here.",
+    price: "$10-15 (coffee + food)",
     wifi: true,
     outlets: true,
-    hours: "Check @founders_cafe on X",
-    vibe: "Startup energy, collaborative",
-    url: "https://x.com/founders_cafe",
-    tip: "Follow @founders_cafe on X for hours and events. Great for meeting other founders.",
+    hours: "Varies by building",
+    vibe: "Spacious, creative, chill",
+    tip: "Best on weekday mornings. Grab coffee + lunch and camp out.",
   },
   {
-    name: "Mechanics' Institute",
-    type: "coworking",
+    name: "Brookfield Place",
+    type: "free",
     neighborhood: "FiDi",
     description:
-      "Historic library and chess room since 1854. Beautiful reading rooms with fast wifi, perfect for deep work.",
-    price: "$120/year",
+      "Upscale shopping and dining complex with plenty of seating and quieter corners for laptop work.",
+    price: "$10-15",
     wifi: true,
     outlets: true,
-    hours: "Mon-Fri 9am-9pm, Sat 10am-5pm, Sun 1pm-5pm",
-    vibe: "Quiet, scholarly, historic",
-    address: "57 Post St",
-    url: "https://www.milibrary.org",
-    tip: "The chess room is legendary. Annual membership is a steal for daily use.",
-  },
-  {
-    name: "StartupHQ",
-    type: "coworking",
-    neighborhood: "FiDi",
-    description:
-      "Founder-focused coworking space in the heart of SF's financial district.",
-    price: "From $200/mo",
-    wifi: true,
-    outlets: true,
-    hours: "24/7 member access",
-    vibe: "Hustle mode, founder-friendly",
-    url: "https://www.startuphq.com",
-  },
-  {
-    name: "NEON",
-    type: "coworking",
-    neighborhood: "Marina",
-    description:
-      "Neighborhood coworking and event space. Great mix of remote workers, freelancers, and small teams.",
-    price: "From $250/mo",
-    wifi: true,
-    outlets: true,
-    hours: "Mon-Fri 8am-6pm",
-    vibe: "Bright, neighborhood feel",
-    url: "https://www.neon.co",
-  },
-  {
-    name: "BerlinHouse",
-    type: "coworking",
-    neighborhood: "FiDi",
-    description:
-      "European-style coworking in Frontier Tower. Community-focused with events and networking.",
-    price: "From $300/mo",
-    wifi: true,
-    outlets: true,
-    hours: "24/7 member access",
-    vibe: "International, community-driven",
-  },
-  {
-    name: "Werqwise",
-    type: "coworking",
-    neighborhood: "FiDi",
-    description:
-      "Flexible coworking and private office spaces with a professional vibe.",
-    price: "From $250/mo",
-    wifi: true,
-    outlets: true,
-    hours: "24/7 member access",
-    vibe: "Professional, flexible",
-    url: "https://www.werqwise.com",
-  },
-  {
-    name: "Homebrew Club",
-    type: "coworking",
-    neighborhood: "SoMa",
-    description:
-      "24/7 member-run DIY community space. Web3, AI, and frontier tech experimentation.",
-    price: "Membership-based",
-    wifi: true,
-    outlets: true,
-    hours: "24/7",
-    vibe: "Hacker vibes, experimental",
-    tip: "Great for late-night building sessions.",
+    hours: "Daily",
+    vibe: "Quiet, clean, corporate",
+    tip: "Try the upper-level seating for a calmer setup.",
   },
 
-  // Public libraries
+  // 📚 Libraries (best value = $0)
   {
-    name: "SF Main Library",
+    name: "NYPL Stephen A. Schwarzman Building",
     type: "library",
-    neighborhood: "Civic Center",
+    neighborhood: "Bryant Park",
     description:
-      "The flagship SF public library. Multiple floors with quiet study rooms, free wifi, and city views from the top floor.",
+      "Iconic main branch with beautiful reading rooms and a classic quiet-work atmosphere.",
     price: "Free",
     wifi: true,
-    outlets: true,
-    hours: "Mon & Sat 10am-6pm, Tue-Thu 9am-8pm, Fri 12pm-6pm, Sun 12pm-6pm",
-    vibe: "Quiet, spacious, classic",
-    address: "100 Larkin St",
-    url: "https://sfpl.org",
-    tip: "Top floor has the best views. Study rooms can be reserved for free.",
+    outlets: false,
+    hours: "10am–6pm",
+    vibe: "Silent, focused, beautiful",
+    tip: "Go early for the best seating in the Rose Main Reading Room.",
   },
   {
-    name: "Mission Branch Library",
+    name: "Brooklyn Public Library Central Library",
     type: "library",
-    neighborhood: "Mission",
+    neighborhood: "Prospect Heights",
     description:
-      "Neighborhood branch with a solid work setup. Less crowded than Main Library.",
+      "Large public library with coworking-style spaces and a strong setup for focused work.",
     price: "Free",
     wifi: true,
     outlets: true,
-    hours: "Mon & Fri 1pm-6pm, Tue & Thu 10am-8pm, Wed 12pm-8pm, Sat 10am-6pm",
-    vibe: "Chill, neighborhood",
-    address: "300 Bartlett St",
-  },
-  {
-    name: "Noe Valley Branch Library",
-    type: "library",
-    neighborhood: "Noe Valley",
-    description:
-      "Bright, modern branch in a family-friendly neighborhood. Great for focused afternoon work.",
-    price: "Free",
-    wifi: true,
-    outlets: true,
-    hours: "Mon 12pm-6pm, Tue 10am-8pm, Wed 12pm-8pm, Thu 10am-6pm, Sat 10am-6pm",
-    vibe: "Modern, quiet, sunny",
-    address: "451 Jersey St",
-  },
-  {
-    name: "Mill Valley Public Library",
-    type: "library",
-    neighborhood: "Mill Valley (Marin)",
-    description:
-      "One of the best reading nooks in the Bay Area. Surrounded by nature with beautiful architecture.",
-    price: "Free",
-    wifi: true,
-    outlets: true,
-    hours: "Mon-Thu 10am-9pm, Fri-Sat 10am-5pm, Sun 12pm-5pm",
-    vibe: "Nature, serene, inspiring",
-    address: "375 Throckmorton Ave, Mill Valley",
-    tip: "Worth the trip across the bridge. Grab lunch on Throckmorton after.",
+    hours: "10am–6pm",
+    vibe: "Quiet, local, spacious",
+    tip: "The Information Commons is the best area for laptop work.",
   },
 
-  // Hotel lobbies
+  // 🏨 Hotel lobbies / public atriums
   {
-    name: "Hotel Kabuki Lobby",
+    name: "Ace Hotel New York Lobby",
     type: "hotel-lobby",
-    neighborhood: "Japantown",
+    neighborhood: "NoMad",
     description:
-      "Calm, Japanese-inspired hotel lobby with comfortable seating. Nobody will bother you if you order a drink.",
-    price: "Free (buy a drink)",
+      "Classic NYC laptop lobby with strong wifi, long tables, and lots of remote workers.",
+    price: "$8-15",
     wifi: true,
-    outlets: false,
-    hours: "Lobby open 24/7",
-    vibe: "Zen, quiet, elegant",
-    address: "1625 Post St",
-    tip: "The courtyard area is especially peaceful.",
+    outlets: true,
+    hours: "All day",
+    vibe: "Busy, startup energy",
+    tip: "Arrive earlier in the day for the best seats.",
   },
   {
-    name: "1 Hotel San Francisco Lobby",
+    name: "Moxy Lower East Side Lobby",
     type: "hotel-lobby",
-    neighborhood: "Mission Bay",
+    neighborhood: "Lower East Side",
     description:
-      "Gorgeous nature-inspired lobby with ample seating, plants, and a calm atmosphere. Great for meetings.",
-    price: "Free",
+      "Modern, sleek lobby with natural light and a good amount of communal seating.",
+    price: "$10-15",
     wifi: true,
     outlets: false,
-    hours: "Lobby open 24/7",
-    vibe: "Modern, green, airy",
-    address: "8 Mission St",
+    hours: "All day",
+    vibe: "Minimal, stylish",
+    tip: "Best for shorter work sessions or calls.",
   },
   {
-    name: "Proper Hotel Lobby",
+    name: "Ace Hotel Brooklyn Lobby",
     type: "hotel-lobby",
-    neighborhood: "Mid-Market",
+    neighborhood: "Downtown Brooklyn",
     description:
-      "Beautifully designed lobby lounge with a cafe. Popular with tech workers for meetings.",
-    price: "Free (buy a coffee)",
+      "Large airy lobby with comfortable seating and a strong work-from-hotel feel.",
+    price: "$10-15",
     wifi: true,
-    outlets: false,
-    hours: "Lobby open all day",
-    vibe: "Chic, design-forward",
-    address: "1100 Market St",
-    tip: "The rooftop bar is great for after-work drinks too.",
-  },
-  {
-    name: "The LINE SF Lobby",
-    type: "hotel-lobby",
-    neighborhood: "Tenderloin/Mid-Market",
-    description:
-      "Trendy hotel with a spacious ground-floor cafe/lobby. Good vibes for casual meetings.",
-    price: "Free (buy a coffee)",
-    wifi: true,
-    outlets: false,
-    hours: "Lobby open all day",
-    vibe: "Trendy, artsy",
-    address: "33 Turk St",
+    outlets: true,
+    hours: "All day",
+    vibe: "Bright, creative",
+    tip: "Good for focused work if you want a polished environment.",
   },
 
-  // Cafes great for working
+  // ☕ Cafes (best under $20 combo)
   {
-    name: "Blue Bottle - South Park",
+    name: "Partners Coffee",
     type: "cafe",
-    neighborhood: "SoMa",
+    neighborhood: "Williamsburg",
     description:
-      "The original Blue Bottle spot in the tech-heavy South Park area. Iconic for startup meetings.",
-    price: "$5-7/coffee",
+      "Popular plant-filled cafe with good coffee and a comfortable setup for laptop work.",
+    price: "$12-18",
+    wifi: true,
+    outlets: true,
+    hours: "8am–6pm",
+    vibe: "Calm, aesthetic",
+    tip: "Back area tends to be best for longer sessions.",
+  },
+  {
+    name: "Housing Works Bookstore Cafe",
+    type: "cafe",
+    neighborhood: "SoHo",
+    description:
+      "Bookstore-cafe with a quiet literary vibe and a unique setting for working.",
+    price: "$10-15",
     wifi: true,
     outlets: false,
-    hours: "7am-5pm daily",
-    vibe: "Classic tech scene",
-    address: "315 Linden St",
-    tip: "South Park is where tons of VCs and founders hang out.",
+    hours: "10am–6pm",
+    vibe: "Quiet, intellectual",
+    tip: "Great if you want a low-noise environment.",
   },
   {
-    name: "Sightglass Coffee - 20th St",
+    name: "Blank Street Coffee",
     type: "cafe",
-    neighborhood: "Mission",
+    neighborhood: "Multiple",
     description:
-      "Spacious, industrial-chic cafe. The 20th St location is frequented by AI folks.",
-    price: "$5-7/coffee",
-    wifi: true,
-    outlets: true,
-    hours: "7am-5pm daily",
-    vibe: "Industrial, spacious, AI crowd",
-    address: "270 7th St",
-    tip: "The 20th St location is where the AI people go.",
-  },
-  {
-    name: "The Mill",
-    type: "cafe",
-    neighborhood: "NoPa",
-    description:
-      "Famous for $4 toast and great coffee. Lots of natural light and a long communal table.",
-    price: "$5-7/coffee",
-    wifi: true,
-    outlets: true,
-    hours: "7am-5pm daily",
-    vibe: "Bright, communal, creative",
-    address: "736 Divisadero St",
-  },
-  {
-    name: "Ritual Coffee - Hayes Valley",
-    type: "cafe",
-    neighborhood: "Hayes Valley",
-    description:
-      "Open-air vibes. Outdoor seating with a great people-watching scene in the heart of Hayes.",
-    price: "$5-6/coffee",
+      "Low-cost coffee option with some locations offering seating for quick work sessions.",
+    price: "$8-12",
     wifi: true,
     outlets: false,
-    hours: "7am-5pm daily",
-    vibe: "Outdoor, social",
-    address: "432B Octavia St",
-    tip: "Mostly outdoor seating - great on sunny days.",
+    hours: "7am–5pm",
+    vibe: "Casual, quick",
+    tip: "Best budget choice when you only need a few hours.",
   },
   {
-    name: "Cafe Reveille",
+    name: "Think Coffee",
     type: "cafe",
-    neighborhood: "Lower Haight",
+    neighborhood: "Union Square",
     description:
-      "Cozy neighborhood cafe with solid wifi and a good mix of locals and remote workers.",
-    price: "$5-6/coffee",
+      "Reliable wifi, lots of seating, and a very work-friendly crowd.",
+    price: "$12-18",
     wifi: true,
     outlets: true,
-    hours: "7am-5pm daily",
-    vibe: "Cozy, neighborhood",
-    address: "610 Long Oak St",
+    hours: "7am–7pm",
+    vibe: "Student/work heavy",
   },
   {
-    name: "The Coffee Movement",
+    name: "Housing Works Bookstore Cafe",
     type: "cafe",
-    neighborhood: "Richmond",
+    neighborhood: "SoHo",
     description:
-      "Community-focused cafe in the Richmond. Less crowded than downtown spots.",
-    price: "$4-6/coffee",
-    wifi: true,
-    outlets: true,
-    hours: "7am-4pm daily",
-    vibe: "Community, relaxed",
-  },
-  {
-    name: "Flywheel Coffee",
-    type: "cafe",
-    neighborhood: "Upper Haight",
-    description:
-      "Great starting point for Golden Gate Park walking meetings. Cozy and laptop-friendly.",
-    price: "$4-6/coffee",
-    wifi: true,
-    outlets: true,
-    hours: "7am-5pm daily",
-    vibe: "Chill, park-adjacent",
-    address: "672 Stanyan St",
-    tip: "Grab a coffee then walk through Golden Gate Park for a walking meeting.",
-  },
-  {
-    name: "Equator Coffee - Fort Mason",
-    type: "cafe",
-    neighborhood: "Marina",
-    description:
-      "Waterfront location at Fort Mason with incredible views. Perfect pre-walk meeting coffee.",
-    price: "$5-7/coffee",
+      "One of the most distinctive laptop spots in Manhattan, with a bookstore feel and a quiet atmosphere.",
+    price: "$10-15",
     wifi: true,
     outlets: false,
-    hours: "7am-5pm daily",
-    vibe: "Scenic, waterfront",
-    address: "2 Marina Blvd, Bldg C",
-    tip: "Start here, then walk the Marina Green waterfront.",
+    hours: "10am–6pm",
+    vibe: "Quiet, literary",
+    tip: "Upstairs seating is usually the best if available.",
   },
+
+  // 💻 Budget coworking
   {
-    name: "Cafe Shoji",
-    type: "cafe",
-    neighborhood: "FiDi",
+    name: "The Yard (day pass deals)",
+    type: "coworking",
+    neighborhood: "Multiple",
     description:
-      "Japanese-inspired cafe in the Financial District. Calm atmosphere for focused work or meetings.",
-    price: "$5-7/coffee",
+      "Occasionally offers day passes or trials that can land under the usual membership cost.",
+    price: "$15-20",
     wifi: true,
     outlets: true,
-    hours: "8am-4pm Mon-Fri",
-    vibe: "Minimal, Japanese, calm",
+    hours: "Business hours",
+    vibe: "Professional",
+    tip: "Check promos because pricing varies a lot.",
   },
   {
-    name: "La Boulangerie",
-    type: "cafe",
-    neighborhood: "Hayes Valley",
+    name: "The Yard: Lower East Side",
+    type: "coworking",
+    neighborhood: "Lower East Side",
     description:
-      "French bakery cafe where you'll run into founders and VCs on any given day.",
-    price: "$5-8/coffee + pastry",
+      "Community-focused coworking with strong amenities, lounge space, and occasional access options.",
+    price: "$15-20",
     wifi: true,
-    outlets: false,
-    hours: "7am-6pm daily",
-    vibe: "French, social, tech scene",
-    tip: "The unofficial meeting spot for Hayes Valley tech people.",
-  },
-  {
-    name: "The Buoy",
-    type: "cafe",
-    neighborhood: "Hayes Valley",
-    description:
-      "Trendy spot in Hayes Valley. Good for casual meetings.",
-    price: "$5-7/coffee",
-    wifi: true,
-    outlets: false,
-    hours: "8am-5pm daily",
-    vibe: "Trendy, social",
+    outlets: true,
+    hours: "Varies",
+    vibe: "Community, startup",
   },
 ];
 
@@ -416,10 +251,10 @@ export default function WorkspacesPage() {
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-6 h-6 rounded bg-accent flex items-center justify-center text-white font-bold text-[10px]">
-                SF
+                NYC
               </div>
               <span className="font-semibold text-sm text-foreground">
-                BudgetSF
+                BudgetNYC
               </span>
             </Link>
             <span className="text-muted text-xs">/ Workspaces</span>
@@ -514,26 +349,6 @@ export default function WorkspacesPage() {
           </Link>
         </div>
 
-        <div className="text-center pt-4 pb-2 text-[11px] text-muted">
-          Spots sourced with help from{" "}
-          <a
-            href="https://x.com/michelleefang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            @michelleefang
-          </a>
-          &apos;s{" "}
-          <a
-            href="https://www.startertosf.guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            Starter Guide to SF
-          </a>
-        </div>
       </div>
     </div>
   );

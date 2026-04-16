@@ -18,7 +18,7 @@ export default function ChatBubble({
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      text: "Hey! Ask me anything about budget spots in SF. Powered by HydraDB. Try \"cheap tacos\" or \"free coworking\" or \"best coffee in Hayes Valley\"",
+      text: "Hey! Ask me anything about budget spots in NYC. Powered by HydraDB. Try \"cheap tacos\" or \"free coworking\" or \"best coffee in Brooklyn\"",
     },
   ]);
   const [input, setInput] = useState("");
@@ -54,8 +54,8 @@ export default function ChatBubble({
                 price_tier: r.venue.price_tier || 1,
                 avg_price: r.venue.avg_price || undefined,
                 tags: (r.venue.tags as string[]) || [],
-                lat: (r.venue.lat as number) || 37.7749,
-                lng: (r.venue.lng as number) || -122.4194,
+                lat: (r.venue.lat as number) || 40.7128,
+                lng: (r.venue.lng as number) || -74.0060,
                 status: "approved" as const,
                 vote_count: 0,
                 votes_needed: 5,
@@ -127,10 +127,10 @@ export default function ChatBubble({
           <div className="px-4 py-3 border-b border-border/60 flex items-center justify-between shrink-0">
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded-lg bg-accent flex items-center justify-center text-white text-[9px] font-bold">
-                SF
+                NYC
               </div>
               <span className="text-[13px] font-semibold text-foreground">
-                BudgetSF Search
+                BudgetNYC Search
               </span>
             </div>
             <button

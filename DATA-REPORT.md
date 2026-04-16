@@ -1,4 +1,4 @@
-# BudgetSF Data Report
+# BudgetNYC Data Report
 
 Generated: 2026-04-07
 

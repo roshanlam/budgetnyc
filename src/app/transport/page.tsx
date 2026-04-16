@@ -16,191 +16,200 @@ type TransportMode = {
 };
 
 const TRANSPORT_MODES: TransportMode[] = [
-  // === Robotaxis ===
+  // === Subway ===
   {
-    name: "Tesla Robotaxi",
-    icon: "🚘",
-    tagline: "Tesla's autonomous ride-hailing — now in SF",
-    cost: "Varies (check the app for pricing)",
-    bestFor: "Autonomous rides in a Tesla",
-    description:
-      "Tesla's Robotaxi service is rolling out in SF. Hail a self-driving Tesla from the app. The future of ride-hailing from the company that's been building towards this for years.",
-    tips: [
-      "Download the Tesla app to request rides",
-      "Availability is expanding — check for coverage in your area",
-      "No driver, no tipping, no awkward small talk",
-      "Compare pricing with Waymo — competition is good for your wallet",
-    ],
-    link: "https://www.tesla.com/robotaxi",
-    linkLabel: "Tesla Robotaxi",
-    highlight: "New in SF",
-  },
-  {
-    name: "Zoox Robotaxi",
-    icon: "🤖",
-    tagline: "Amazon's purpose-built robotaxi — coming soon",
-    cost: "TBD",
-    bestFor: "Another autonomous option hitting SF streets",
-    description:
-      "Zoox is Amazon's autonomous vehicle company with a purpose-built robotaxi (no steering wheel, no pedals). It's a completely different form factor — the vehicle is designed from scratch for passengers, not adapted from a regular car. Currently testing in SF with a public launch on the horizon.",
-    tips: [
-      "Purpose-built vehicle — not a retrofitted car like Waymo or Tesla",
-      "Bi-directional design means it doesn't need to do U-turns",
-      "Keep an eye out for their cube-shaped vehicles around SoMa and downtown",
-      "Sign up for early access on their website",
-    ],
-    link: "https://zoox.com",
-    linkLabel: "Zoox",
-    highlight: "Coming Soon",
-  },
-  {
-    name: "Waymo Robotaxi",
-    icon: "🤖",
-    tagline: "The OG robotaxi — reliable and no surge pricing",
-    cost: "~$4-15 per ride (comparable to Uber, often cheaper)",
-    bestFor: "Getting around SF without surge pricing",
-    description:
-      "Waymo operates autonomous robotaxis across SF. No driver, no awkward small talk, no surge pricing. Available 24/7 in most of SF. The rides are smooth, safe, and surprisingly affordable compared to Uber/Lyft during peak hours.",
-    tips: [
-      "No surge pricing — great for late nights and events when Uber spikes 3x",
-      "Download the Waymo One app and join the waitlist if you haven't already",
-      "Rides are often cheaper than Uber for short-to-medium trips",
-      "Can't go to the airport yet — use BART for SFO instead",
-      "The car will pull up exactly where you pin it, so be precise with your pickup",
-    ],
-    link: "https://waymo.smart.link/4pcoqniy5?code=HARNOO2645",
-    linkLabel: "Get $10 Off Waymo (Code: HARNOO2645)",
-    highlight: "No Surge Pricing",
-  },
-
-  // === Rideshare & Bikes ===
-  {
-    name: "Lyft (Rides + Bay Wheels E-Bikes)",
-    icon: "🚗",
-    tagline: "Rides, bikes, and scooters all in one app",
-    cost: "Rides: $8-25+ | Bay Wheels: $3/ride or $20/mo unlimited",
-    bestFor: "Rides when robotaxis aren't available + e-bikes for short trips",
-    description:
-      "Lyft does rides AND operates Bay Wheels, SF's e-bike share network. The $20/month bike membership gives you unlimited 30-min rides — honestly the best deal in SF transit. E-bikes make the hills totally manageable. For car rides, Lyft is often cheaper than Uber in SF.",
-    tips: [
-      "Bay Wheels e-bikes are game-changers for SF hills — $20/mo unlimited",
-      "BART + Bay Wheels combo gets you anywhere in SF for under $5",
-      "Check Lyft vs Uber pricing — one is often 30% cheaper",
-      "Lyft Shared can save 30-50% if you're not in a rush",
-      "Bay Wheels stations are on almost every corner — check availability in app",
-      "Sign up with this link and get 50% off your first ride",
-    ],
-    link: "https://www.lyft.com/i/HARNOOR348519?utm_medium=2pi_iacc",
-    linkLabel: "Get 50% off first Lyft ride",
-    highlight: "50% Off First Ride",
-  },
-  {
-    name: "Uber",
-    icon: "🚙",
-    tagline: "The default — use strategically",
-    cost: "$8-25+ per ride (varies wildly with surge)",
-    bestFor: "Late nights, groups splitting, airport trips",
-    description:
-      "The default ride-hail but not always the cheapest. Surge pricing during events, rain, and Friday nights can make a $10 ride cost $35. Always check Waymo and Lyft first. Best for scheduled airport rides and splitting with friends.",
-    tips: [
-      "Always compare with Lyft and Waymo before booking",
-      "Check Waymo first for no-surge pricing",
-      "Split rides with friends — SF is small enough that most rides are short",
-      "Schedule rides in advance to lock in pricing for airport trips",
-      "UberX Share can save 30-50% if you're not in a rush",
-      "Sign up with this link and get $25 off your first 2 rides",
-    ],
-    link: "https://referrals.uber.com/refer?id=q3bjmq31be1h",
-    linkLabel: "Get $25 off first 2 Uber rides",
-    highlight: "$25 Off First 2 Rides",
-  },
-
-  // === Public Transit ===
-  {
-    name: "Muni (Bus & Metro)",
-    icon: "🚌",
-    tagline: "SF's public transit backbone",
-    cost: "$2.50/ride or $81/month unlimited (Clipper card)",
-    bestFor: "Daily commuting around SF",
-    description:
-      "Muni runs buses, light rail (Metro), and historic streetcars across the city. The monthly pass is unbeatable if you ride daily. Reliable in most areas, especially downtown corridors. The N-Judah, L-Taraval, and 38-Geary are the lines you'll use most.",
-    tips: [
-      "Get a Clipper card immediately — works on Muni, BART, and Caltrain",
-      "$81/month Muni pass is a no-brainer if you commute",
-      "The N-Judah goes from Ocean Beach through downtown to AT&T Park",
-      "38-Geary is the most frequent bus in the city (Richmond to downtown)",
-      "Use the Muni app or Google Maps for real-time arrivals — don't just guess",
-      "Free transfers within 2 hours of your first tap",
-    ],
-    link: "https://www.sfmta.com",
-    linkLabel: "SFMTA",
-    highlight: "$81/mo Unlimited",
-  },
-  {
-    name: "BART",
+    name: "MTA Subway",
     icon: "🚇",
-    tagline: "The heavy rail connecting SF to East Bay and SFO",
-    cost: "$2-13 depending on distance",
-    bestFor: "Getting to Oakland, Berkeley, SFO airport",
+    tagline: "The backbone of NYC — 472 stations, 24/7",
+    cost: "$2.90/ride or $34/week unlimited",
+    bestFor: "Getting anywhere in NYC fast and cheap",
     description:
-      "BART is the regional rapid transit system. It connects SF to Oakland, Berkeley, and the East Bay, plus goes directly to SFO airport. Faster than driving during rush hour. Key SF stations: Embarcadero, Montgomery, Powell, Civic Center, 16th St Mission, 24th St Mission.",
+      "The NYC subway is the most extensive public transit system in North America. 24 lines, 472 stations, running 24/7. Once you learn the system, you can get anywhere. The unlimited weekly MetroCard ($34) pays for itself after 12 rides.",
     tips: [
-      "BART to SFO costs ~$10 and takes 30 min from downtown — way cheaper than Uber",
-      "Embarcadero and Montgomery are the main downtown stations",
-      "Runs 5am-midnight weekdays, 6am-midnight weekends",
-      "Don't leave anything visible in your car at BART parking lots",
-      "The Oakland/Berkeley trip is 15-25 min — don't let people tell you it's far",
+      "Get a MetroCard or use OMNY (tap-to-pay with phone/card)",
+      "$34/week unlimited is the best deal if you ride 2+ times per day",
+      "Express trains skip stops — check the map before boarding",
+      "Late night service is slower but still runs — safer than walking",
+      "Download Citymapper or Google Maps for real-time train tracking",
+      "Uptown = north, Downtown = south, Crosstown = east-west",
     ],
-    link: "https://www.bart.gov",
-    linkLabel: "BART",
-    highlight: "SFO for ~$10",
+    link: "https://new.mta.info",
+    linkLabel: "MTA Info",
+    highlight: "$34/week Unlimited",
   },
+
+  // === Citi Bike ===
   {
-    name: "Caltrain",
-    icon: "🚆",
-    tagline: "SF to Silicon Valley commuter rail",
-    cost: "$3.75-15 depending on zones",
-    bestFor: "Getting to South Bay (Palo Alto, Mountain View, San Jose)",
+    name: "Citi Bike",
+    icon: "🚴",
+    tagline: "20,000+ bikes across NYC — $15/month unlimited",
+    cost: "$15/month unlimited | $4.49/ride",
+    bestFor: "Short trips under 45 minutes",
     description:
-      "Caltrain runs from SF (4th & King station) down the Peninsula to San Jose. Essential if you're taking meetings in Palo Alto, Mountain View, or other South Bay tech hubs. Recently electrified — faster and more frequent now.",
+      "NYC's bike share system with docking stations across Manhattan, Brooklyn, Queens, and the Bronx. The $15/month membership gives you unlimited 45-minute rides. Perfect for quick crosstown trips or avoiding crowded trains.",
     tips: [
-      "The 4th & King station in SoMa is the SF terminus",
-      "Express trains skip stops and cut the Palo Alto trip to ~45 min",
-      "Bring your Visible hotspot — wifi on Caltrain is unreliable",
-      "Bike cars available if you're doing the Bay Wheels + Caltrain combo",
-      "South Bay is further than you think — allot 1.5-2 hours door-to-door",
-      "Monthly pass saves money if you go to South Bay more than 2x/week",
+      "$15/month unlimited is an incredible deal — cheaper than 6 subway rides",
+      "Check bike/dock availability in the app before heading out",
+      "Bike lanes exist but stay alert — NYC traffic is intense",
+      "Swap bikes at any station to reset your 45-minute timer",
+      "E-bikes cost an extra $0.20/min but make bridges and hills easy",
+      "Return bikes 5 minutes before the 45-min mark to avoid fees",
     ],
-    link: "https://www.caltrain.com",
-    linkLabel: "Caltrain",
-    highlight: "SF to Palo Alto 45min",
+    link: "https://citibikenyc.com",
+    linkLabel: "Get Citi Bike",
+    highlight: "$15/mo Unlimited",
   },
+
+  // === Buses ===
+  {
+    name: "MTA Buses",
+    icon: "🚌",
+    tagline: "When the subway doesn't go where you need",
+    cost: "$2.90/ride (free transfer from subway within 2 hours)",
+    bestFor: "Crosstown routes, outer boroughs, late night",
+    description:
+      "NYC buses fill in the gaps where the subway doesn't reach. Slower than trains but sometimes more direct. The M15 SBS (Select Bus Service) lines are faster with fewer stops. Free transfers from subway to bus within 2 hours.",
+    tips: [
+      "Use Google Maps or Citymapper to find the right bus",
+      "SBS (Select Bus Service) lines are express — fewer stops, faster",
+      "Pay before boarding on SBS routes at the sidewalk kiosk",
+      "M14, M15, M34 are key crosstown routes",
+      "Buses show 'Limited' for express routes that skip stops",
+      "Free transfer from subway to bus within 2 hours with MetroCard",
+    ],
+    link: "https://new.mta.info/guides/buses",
+    linkLabel: "Bus Guide",
+  },
+
+  // === Walking ===
   {
     name: "Walking",
     icon: "🚶",
-    tagline: "SF is more walkable than you think",
+    tagline: "NYC is built for walking",
     cost: "Free",
-    bestFor: "Neighborhoods, meetings, exploring",
+    bestFor: "Short distances, exploring neighborhoods",
     description:
-      "SF is only 7x7 miles. Most of the key neighborhoods (Hayes Valley, Mission, SoMa, FiDi, Marina) are walkable between each other. Walking meetings are a founder staple — grab a coffee and walk the Embarcadero, Presidio, or Marina Green.",
+      "Manhattan is only 13.4 miles long and 2.3 miles wide. Many neighborhoods are more walkable than you think. Walking is often faster than waiting for the subway for trips under 10 blocks. Plus you actually see the city.",
     tips: [
-      "Presidio Tunnel Tops has amazing GGB views — great for walking meetings",
-      "Embarcadero along the pier is flat and scenic — start at Philz Coffee",
-      "Hayes Valley to Mission is a 20-min walk through the heart of startup SF",
-      "Avoid Tenderloin for walking, especially at night",
-      "Wear layers — microclimates mean sunny FiDi can be foggy Sunset",
+      "20 blocks = 1 mile — use this to estimate walking time",
+      "Walk north-south when possible — avenues are long, blocks are short",
+      "Download CityMapper for the best walk/transit combo routes",
+      "Avoid walking through certain areas late at night — take the subway",
+      "Central Park is great for walking meetings",
+      "Pedestrians have right of way, but don't test NYC drivers",
     ],
     highlight: "Free & Healthy",
+  },
+
+  // === Rideshare ===
+  {
+    name: "Uber / Lyft",
+    icon: "🚗",
+    tagline: "For when you really need a car",
+    cost: "$15-40+ per ride (surge pricing applies)",
+    bestFor: "Late nights, groups, outer boroughs, luggage",
+    description:
+      "In NYC, rideshare is expensive and often slower than the subway due to traffic. Best for late nights, traveling with luggage, or splitting costs with friends. Always check both Uber and Lyft — pricing varies.",
+    tips: [
+      "Subway is almost always faster and cheaper for Manhattan",
+      "Rideshare makes sense for outer boroughs with poor subway access",
+      "Split rides with friends to make it more affordable",
+      "Avoid Friday/Saturday nights — surge pricing is brutal",
+      "For airports, compare with subway — it's usually way cheaper",
+      "Use UberX Share or Lyft Shared to save 30-50%",
+    ],
+    link: "https://uber.com",
+    linkLabel: "Download Uber",
+  },
+  {
+    name: "Via",
+    icon: "🚐",
+    tagline: "Shared rides for $5-8 in outer boroughs",
+    cost: "$5-8 per ride",
+    bestFor: "Affordable rides in outer boroughs and transit deserts",
+    description:
+      "Via operates shared van service in areas with limited subway access. Much cheaper than Uber/Lyft for short trips. Available in parts of Brooklyn, Queens, and the Bronx. Book through the app and get picked up at a nearby corner.",
+    tips: [
+      "Only works in specific zones — check the app for coverage",
+      "Shared ride means small detours to pick up other passengers",
+      "Way cheaper than Uber for outer borough trips",
+      "Book ahead for better pricing",
+    ],
+    link: "https://ridewithvia.com",
+    linkLabel: "Get Via",
+  },
+
+  // === Ferry ===
+  {
+    name: "NYC Ferry",
+    icon: "⛴️",
+    tagline: "Scenic commute across the waterways",
+    cost: "$4.50/ride (same as subway)",
+    bestFor: "Commuting from Brooklyn/Queens, avoiding subway crowds",
+    description:
+      "NYC Ferry connects Manhattan, Brooklyn, Queens, and the Bronx with routes along the East River and Hudson. Same price as the subway but with better views. Runs year-round, weather permitting.",
+    tips: [
+      "$4.50 per ride — same price as a subway ride",
+      "Great for avoiding packed trains during rush hour",
+      "Routes include Astoria, Williamsburg, DUMBO, and Rockaway Beach",
+      "Bikes allowed on board for free",
+      "Can be delayed or canceled in bad weather",
+      "The Rockaway route is perfect for summer beach trips",
+    ],
+    link: "https://www.ferry.nyc",
+    linkLabel: "NYC Ferry",
+    highlight: "Same Price as Subway",
+  },
+
+  {
+    name: "Staten Island Ferry",
+    icon: "🛳️",
+    tagline: "Free ride with Statue of Liberty views",
+    cost: "FREE",
+    bestFor: "Free Statue of Liberty views, killing time",
+    description:
+      "The Staten Island Ferry is completely free and runs 24/7 between Manhattan and Staten Island. The 25-minute ride offers incredible views of the Statue of Liberty, Ellis Island, and the downtown skyline. Tourists pay $30+ for worse views.",
+    tips: [
+      "Completely free — best deal in NYC",
+      "Runs 24/7 every 15-30 minutes",
+      "Board on the right side (Manhattan to SI) for Statue of Liberty views",
+      "Round trip takes about 1 hour — you don't have to get off in Staten Island",
+      "Bring a jacket — it gets windy on the outdoor decks",
+      "Go at sunset for the best photos",
+    ],
+    link: "https://www.siferry.com",
+    linkLabel: "Staten Island Ferry",
+    highlight: "FREE",
+  },
+
+  // === Commuter Rail ===
+  {
+    name: "Metro-North & LIRR",
+    icon: "🚆",
+    tagline: "Commuter trains to the suburbs",
+    cost: "$5-20 depending on distance",
+    bestFor: "Getting to outer suburbs, Westchester, Long Island",
+    description:
+      "Metro-North goes north to Westchester and Connecticut from Grand Central. LIRR goes east to Long Island from Penn Station. Both are essential if you're living in the suburbs or visiting friends outside the city.",
+    tips: [
+      "Metro-North leaves from Grand Central, LIRR from Penn Station",
+      "Off-peak tickets are cheaper — avoid rush hour if possible",
+      "Monthly passes available if you're commuting regularly",
+      "LIRR goes to beaches on Long Island in summer",
+      "Check weekend schedules — service is less frequent",
+    ],
+    link: "https://new.mta.info/agency/metro-north",
+    linkLabel: "Metro-North / LIRR",
   },
 ];
 
 const BUDGET_HACKS = [
-  "Ditch the car — parking is expensive and break-ins are frequent",
-  "Clipper card is your best friend — works on Muni, BART, and Caltrain",
-  "Waymo for no-surge rides, BART for airport, Bay Wheels for short hops",
-  "The combo of BART + Bay Wheels gets you anywhere in SF for under $5",
-  "Never pay for parking — there's always a transit option",
-  "South Bay meetings? Caltrain + hotspot and you can work the whole way",
+  "MetroCard unlimited ($34/week) pays for itself after 12 rides",
+  "Citi Bike ($15/mo) is cheaper than 6 subway rides and gets you around faster",
+  "Walking is often faster than subway for trips under 10 blocks",
+  "Staten Island Ferry is FREE and has the best Statue of Liberty views",
+  "Free subway-to-bus transfers within 2 hours — use it strategically",
+  "Skip Uber/Lyft unless absolutely necessary — subway is faster and way cheaper",
 ];
 
 export default function TransportPage() {
@@ -212,10 +221,10 @@ export default function TransportPage() {
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-6 h-6 rounded bg-accent flex items-center justify-center text-white font-bold text-[10px]">
-                SF
+                NYC
               </div>
               <span className="font-semibold text-sm text-foreground">
-                BudgetSF
+                BudgetNYC
               </span>
             </Link>
             <span className="text-muted text-xs">/ Getting Around</span>
@@ -231,7 +240,7 @@ export default function TransportPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.04] via-transparent to-warm/40" />
         <div className="relative max-w-4xl mx-auto px-4 pt-10 pb-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-light text-accent-dark text-xs font-medium mb-4 slide-up">
-            <span>🚀</span> Skip the car, save thousands
+            <span>🚇</span> You don't need a car
           </div>
           <h1
             className="text-3xl sm:text-4xl text-foreground mb-3 slide-up"
@@ -241,14 +250,14 @@ export default function TransportPage() {
               animationFillMode: "both",
             }}
           >
-            Getting Around SF
+            Getting Around NYC
           </h1>
           <p
             className="text-sm sm:text-base text-muted max-w-lg mx-auto leading-relaxed slide-up"
             style={{ animationDelay: "0.1s", animationFillMode: "both" }}
           >
-            Robotaxis, buses, bikes, and trains. Everything you need to get
-            around SF without a car.
+            Subway, bikes, buses, and ferries. Everything you need to navigate
+            NYC without breaking the bank.
           </p>
         </div>
       </div>
@@ -348,27 +357,6 @@ export default function TransportPage() {
             </div>
           ))}
         </div>
-
-        <div className="text-center pt-10 text-[11px] text-muted">
-          Tips sourced with help from{" "}
-          <a
-            href="https://x.com/michelleefang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            @michelleefang
-          </a>
-          &apos;s{" "}
-          <a
-            href="https://www.startertosf.guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:underline"
-          >
-            Starter Guide to SF
-          </a>
-        </div>
       </div>
     </div>
   );
@@ -404,7 +392,7 @@ function TransitChart() {
         className="text-lg text-foreground mb-1"
         style={{ fontFamily: "var(--font-dm-serif)" }}
       >
-        SF is a transit city
+        NYC leads North America in transit usage
       </h2>
       <p className="text-[11px] text-muted mb-5">
         Canadian &amp; U.S. metro areas with the highest share of transit
@@ -417,14 +405,13 @@ function TransitChart() {
 
       <div className="space-y-1.5">
         {TRANSIT_DATA.map((d) => {
-          const isSF = d.city.startsWith("San Francisco");
-          const barColor =
-            isSF
-              ? "bg-accent"
-              : d.country === "ca"
-                ? "bg-red-400"
-                : "bg-blue-400";
-          const textColor = isSF ? "text-accent font-semibold" : "text-muted";
+          const isNYC = d.city.startsWith("New York");
+          const barColor = isNYC
+            ? "bg-accent"
+            : d.country === "ca"
+              ? "bg-red-400"
+              : "bg-blue-400";
+          const textColor = isNYC ? "text-accent font-semibold" : "text-muted";
 
           return (
             <div key={d.city} className="flex items-center gap-2">
@@ -435,13 +422,11 @@ function TransitChart() {
               </span>
               <div className="flex-1 h-5 bg-background rounded overflow-hidden">
                 <div
-                  className={`h-full rounded transition-all duration-700 ${barColor} ${isSF ? "shadow-sm" : ""}`}
+                  className={`h-full rounded transition-all duration-700 ${barColor} ${isNYC ? "shadow-sm" : ""}`}
                   style={{ width: `${(d.pct / MAX_PCT) * 100}%` }}
                 />
               </div>
-              <span
-                className={`text-[11px] w-[38px] shrink-0 ${textColor}`}
-              >
+              <span className={`text-[11px] w-[38px] shrink-0 ${textColor}`}>
                 {d.pct}%
               </span>
             </div>
@@ -454,10 +439,12 @@ function TransitChart() {
           <span className="w-2.5 h-2.5 rounded bg-blue-400 inline-block" /> U.S.
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded bg-red-400 inline-block" /> Canada
+          <span className="w-2.5 h-2.5 rounded bg-red-400 inline-block" />{" "}
+          Canada
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded bg-accent inline-block" /> San Francisco
+          <span className="w-2.5 h-2.5 rounded bg-accent inline-block" /> New
+          York City
         </span>
       </div>
     </div>

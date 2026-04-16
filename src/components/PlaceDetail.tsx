@@ -88,7 +88,7 @@ export default function PlaceDetail({ place, onClose }: PlaceDetailProps) {
             View Details
           </Link>
           <a
-            href={`https://maps.google.com/?q=${encodeURIComponent(place.address + ", San Francisco, CA")}`}
+            href={`https://maps.google.com/?q=${encodeURIComponent(place.address + ", New York, NY")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-1.5 px-4 py-2.5 bg-warm text-foreground text-[12px] font-semibold rounded-xl hover:bg-warm-dark/40 transition-colors press"

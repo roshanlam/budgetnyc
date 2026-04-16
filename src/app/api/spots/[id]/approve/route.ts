@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { approveSpot } from "@/lib/spots-store";
 
-const ADMIN_SECRET = process.env.ADMIN_SECRET || "budgetsf-admin-2024";
+const ADMIN_SECRET = process.env.ADMIN_SECRET || "budgetnyc-admin-2024";
 
 export async function POST(
   request: NextRequest,
